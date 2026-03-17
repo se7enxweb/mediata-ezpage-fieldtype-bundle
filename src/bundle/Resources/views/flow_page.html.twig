@@ -1,0 +1,31 @@
+{# content \Netgen\IbexaSiteApi\API\Values\Content #}
+{# location \Netgen\IbexaSiteApi\API\Values\Location #}
+
+{% extends nglayouts.layoutTemplate %}
+
+{% block content %}
+    <div class="view-type view-type-{{ view_type }} flow-page">
+        {% set page_field = content.fields.page %}
+        {% set page = page_field.value.page %}
+        {% if page is not null and page.zones is not empty %}
+            <div class="flow-page__layout layout-{{ page.layout|lower }}">
+                {% for zone in page.zones %}
+                    <div class="flow-page__zone flow-page__zone--{{ zone.identifier }}">
+                        {% for block in zone.blocks %}
+                            <div class="flow-page__block flow-page__block--{{ block.type }}" data-block-id="{{ block.id }}">
+                                {% if block.name is not empty %}
+                                    <h2 class="flow-page__block-title">{{ block.name }}</h2>
+                                {% endif %}
+                                {% for item in ezpage_valid_block_items(block) %}
+                                    {% if item.locationId is not empty %}
+                                        {{ ng_view_content_embedded('line', { 'locationId': item.locationId }) }}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -28,3 +28,9 @@ services:
     MediataCom\MediataEzpageFieldtypeBundle\Core\REST\Common\FieldTypeProcessor\PageProcessor:
         tags:
             - { name: ibexa.rest.field_type.processor, alias: ezpage }
+
+    MediataCom\MediataEzpageFieldtypeBundle\Twig\EzPageExtension:
+        arguments:
+            $pageService: '@ibexa.field_type.ezpage.pageService'
+        tags:
+            - { name: twig.extension }
