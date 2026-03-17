@@ -1,0 +1,35 @@
+parameters:
+    # Parameter provider
+    ibexa.field_type.ezpage.parameterProvider.class: MediataCom\MediataEzpageFieldtypeBundle\Core\MVC\Symfony\FieldType\Page\ParameterProvider
+
+    # Page
+    ibexa.field_type.ezpage.pageService.class: MediataCom\MediataEzpageFieldtypeBundle\FieldType\Page\PageService
+    ibexa.field_type.ezpage.pageService.factory.class: MediataCom\MediataEzpageFieldtypeBundle\Core\MVC\Symfony\FieldType\Page\PageServiceFactory
+    ibexa.field_type.ezpage.block.class: MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\Parts\Block
+    ibexa.field_type.ezpage.zone.class: MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\Parts\Zone
+    ibexa.field_type.ezpage.hashConverter.class: MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\HashConverter
+
+services:
+    # Parameter providers
+    ibexa.field_type.ezpage.parameterProvider:
+        class: "%ibexa.field_type.ezpage.parameterProvider.class%"
+        arguments: ["@ibexa.field_type.ezpage.pageService"]
+        tags:
+            - {name: ibexa.field_type.view.parameter.provider, alias: ezpage}
+
+    # Page
+    ibexa.field_type.ezpage.pageService.factory:
+        class: "%ibexa.field_type.ezpage.pageService.factory.class%"
+
+    ibexa.field_type.ezpage.pageService:
+        class: "%ibexa.field_type.ezpage.pageService.class%"
+        factory: ["@ibexa.field_type.ezpage.pageService.factory", buildService]
+        arguments:
+            - "%ibexa.field_type.ezpage.pageService.class%"
+            - '@ibexa.config.resolver'
+            - "@ibexa.field_type.ezpage.storage_gateway"
+            - "@ibexa.api.service.content"
+        lazy: true
+
+    ibexa.field_type.ezpage.hashConverter:
+        class: "%ibexa.field_type.ezpage.hashConverter.class%"

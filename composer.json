@@ -1,0 +1,29 @@
+{
+    "name": "se7enxweb/mediata-ezpage-fieldtype-bundle",
+    "description": "eZ page fieldtype",
+    "type": "ezplatform-bundle",
+    "homepage": "https://github.com/se7enxweb/mediata-ezpage-fieldtype-bundle",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "7x",
+            "homepage": "https://se7enx.com",
+        },
+        {
+            "name": "Holger Marx",
+            "homepage": "https://www.mediata.net",
+            "email": "holger.marx@mediata.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MediataCom\\MediataEzpageFieldtypeBundle\\": "src/bundle/",
+            "MediataCom\\MediataEzpageFieldtypeLib\\": "src/lib/"
+        }
+    },
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ibexa/core": "~4.5.0",
+        "symfony/http-kernel": "^5.0"
+    }
+}

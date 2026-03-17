@@ -1,0 +1,5 @@
+services:
+    MediataCom\MediataEzpageFieldtypeBundle\Core\Persistence\Legacy\Content\FieldValue\Converter\PageConverter:
+        class: MediataCom\MediataEzpageFieldtypeBundle\Core\Persistence\Legacy\Content\FieldValue\Converter\PageConverter
+        tags:
+            - { name: ibexa.field_type.storage.legacy.converter, alias: ezpage }

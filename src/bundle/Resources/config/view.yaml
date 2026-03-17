@@ -1,0 +1,9 @@
+services:
+    ezpublish_legacy.block_view_provider:
+        class: MediataCom\MediataEzpageFieldtypeBundle\Core\MVC\View\Provider\Block
+        parent: ezpublish_legacy.view_provider
+        public: false
+        calls:
+            - [ setPageService, [ "@ibexa.field_type.ezpage.pageService" ] ]
+        tags:
+            - { name: ibexa.view.provider, type: 'MediataCom\MediataEzpageFieldtypeBundle\Core\MVC\Symfony\View\BlockView', priority: -90 }

@@ -1,0 +1,10 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+    MediataCom\MediataEzpageFieldtypeLib\FieldType\Mapper\PageFormMapper:
+        arguments:
+            $pageService: '@ibexa.field_type.ezpage.pageService'
+        tags:
+            - { name: ibexa.admin_ui.field_type.form.mapper.definition, fieldType: ezpage }

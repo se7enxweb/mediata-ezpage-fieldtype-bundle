@@ -1,0 +1,18 @@
+services:
+    MediataCom\MediataEzpageFieldtypeBundle\Core\MVC\Symfony\View\Builder\BlockViewBuilder:
+        class: MediataCom\MediataEzpageFieldtypeBundle\Core\MVC\Symfony\View\Builder\BlockViewBuilder
+        arguments:
+            - "@ibexa.field_type.ezpage.pageService"
+            - '@Ibexa\Core\MVC\Symfony\View\Configurator\ViewProvider'
+            - '@Ibexa\Core\MVC\Symfony\View\ParametersInjector\EventDispatcherInjector'
+                
+    MediataCom\MediataEzpageFieldtypeBundle\View\Manager:
+        class: MediataCom\MediataEzpageFieldtypeBundle\View\Manager
+        arguments:
+            - "@twig"
+            - "@event_dispatcher"
+            - '@ibexa.siteaccessaware.repository'
+            - '@ibexa.config.resolver'
+            - '%ibexa.content_view.viewbase_layout%'
+            - '@Ibexa\Core\MVC\Symfony\View\Configurator\ViewProvider'
+            - "@?logger"

@@ -1,0 +1,30 @@
+parameters:
+    mediata.field_type.ezpage.identifier: 'ezpage'
+    #external_storage_gateways.yml
+    mediata.fieldType.ezpage.storage_gateway.class: MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\PageStorage\Gateway\DoctrineStorage
+    mediata.controller.page.view.class: MediataCom\MediataEzpageFieldtypeBundle\Controller\PageController
+
+services:
+    _defaults:
+        autoconfigure: true
+        autowire: true
+        public: false
+        
+    ibexa.field_type.ezpage.storage_gateway:
+        class: "%mediata.fieldType.ezpage.storage_gateway.class%"
+        arguments: [ "@ibexa.api.storage_engine.legacy.connection" ]
+        
+    ibexa.controller.page.view:
+        class: "%mediata.controller.page.view.class%"
+        arguments: [ MediataCom\MediataEzpageFieldtypeBundle\View\Manager, "@ibexa.fieldType.ezpage.pageService" ]
+        parent: Ibexa\Core\MVC\Symfony\Controller\Controller
+        
+    # Same as above for the page controller
+    # {{ render( controller( "ez_page:viewAction", {'block': myBlock} ) ) }}
+    ez_page:
+        alias: ibexa.controller.page.view             
+        
+                
+    MediataCom\MediataEzpageFieldtypeBundle\Core\REST\Common\FieldTypeProcessor\PageProcessor:
+        tags:
+            - { name: ibexa.rest.field_type.processor, alias: ezpage }
