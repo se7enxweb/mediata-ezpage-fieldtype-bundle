@@ -23,7 +23,7 @@
     },
     "require": {
         "php": "^7.4 || ^8.0",
-        "ibexa/core": "~4.5.0",
+        "ibexa/core": "~4.6.0",
         "symfony/http-kernel": "^5.0"
     }
 }
