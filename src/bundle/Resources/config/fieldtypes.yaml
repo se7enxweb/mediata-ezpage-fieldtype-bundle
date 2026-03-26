@@ -4,12 +4,12 @@ parameters:
 services:
     ibexa.field_type.ezpage:
         class: "%mediata.field_type.ezpage.class%"
-        parent: Ibexa\Core\FieldType\FieldType
+        parent: ezpublish.fieldType
         arguments: ["@ibexa.field_type.ezpage.pageService", "@ibexa.field_type.ezpage.hashConverter"]
         tags:
-            - {name: ibexa.field_type, alias: ezpage}
+            - {name: ezplatform.field_type, alias: ezpage}
 
     ibexa.page_field_type.not_indexable:
-        class: Ibexa\Core\FieldType\Unindexed
+        class: eZ\Publish\Core\FieldType\Unindexed
         tags:
-            - { name: ibexa.field_type.indexable, alias: ezpage }
+            - { name: ezplatform.field_type.indexable, alias: ezpage }

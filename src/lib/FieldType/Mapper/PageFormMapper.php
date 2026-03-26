@@ -9,8 +9,8 @@
 namespace MediataCom\MediataEzpageFieldtypeLib\FieldType\Mapper;
 
 use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\PageService;
-use Ibexa\AdminUi\Form\Data\FieldDefinitionData;
-use Ibexa\AdminUi\FieldType\FieldDefinitionFormMapperInterface;
+use EzSystems\EzPlatformAdminUi\Form\Data\FieldDefinitionData;
+use EzSystems\EzPlatformAdminUi\FieldType\FieldDefinitionFormMapperInterface;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;

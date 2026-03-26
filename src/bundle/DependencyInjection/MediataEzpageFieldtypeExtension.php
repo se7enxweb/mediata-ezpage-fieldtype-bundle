@@ -6,10 +6,7 @@
  */
 namespace MediataCom\MediataEzpageFieldtypeBundle\DependencyInjection;
 
-use Ibexa\Bundle\Core\DependencyInjection\Configuration\RepositoryConfigParser;
-use Ibexa\Bundle\Core\DependencyInjection\Configuration\RepositoryConfigParserInterface;
-use Ibexa\Bundle\Core\DependencyInjection\Configuration\SiteAccessAware\ConfigurationProcessor;
-use Ibexa\Bundle\Core\DependencyInjection\Configuration\Suggestion\Collector\SuggestionCollector;
+use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\Suggestion\Collector\SuggestionCollector;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\Config\Resource\FileResource;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -17,18 +14,17 @@ use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 use Symfony\Component\DependencyInjection\Loader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\Yaml\Yaml;
-use Ibexa\Bundle\Core\DependencyInjection\Configuration\Suggestion\Collector\SuggestionCollectorAwareInterface;
 use MediataCom\MediataEzpageFieldtypeBundle\DependencyInjection\Configuration\Parser\Page;
 
 class MediataEzpageFieldtypeExtension extends Extension implements PrependExtensionInterface
 {
-    /** @var \Ibexa\Bundle\Core\DependencyInjection\Configuration\Suggestion\Collector\SuggestionCollector */
+    /** @var \eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\Suggestion\Collector\SuggestionCollector */
     private $suggestionCollector;
 
-    /** @var \Ibexa\Bundle\Core\DependencyInjection\Configuration\ParserInterface[] */
+    /** @var array */
     private $siteAccessConfigParsers;
 
-    /** @var \Ibexa\Bundle\Core\DependencyInjection\Configuration\RepositoryConfigParserInterface[] */
+    /** @var array */
     private $repositoryConfigParsers = [];
     
     public function __construct(array $siteAccessConfigParsers = [], array $repositoryConfigParsers = [])

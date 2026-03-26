@@ -7,4 +7,4 @@ services:
         arguments:
             $pageService: '@ibexa.field_type.ezpage.pageService'
         tags:
-            - { name: ibexa.admin_ui.field_type.form.mapper.definition, fieldType: ezpage }
+            - { name: ezplatform.field_type.form_mapper.definition, fieldType: ezpage }

@@ -12,12 +12,12 @@ services:
         
     ibexa.field_type.ezpage.storage_gateway:
         class: "%mediata.fieldType.ezpage.storage_gateway.class%"
-        arguments: [ "@ibexa.api.storage_engine.legacy.connection" ]
+        arguments: [ "@ezpublish.api.storage_engine.legacy.connection" ]
         
     ibexa.controller.page.view:
         class: "%mediata.controller.page.view.class%"
         arguments: [ MediataCom\MediataEzpageFieldtypeBundle\View\Manager, "@ibexa.fieldType.ezpage.pageService" ]
-        parent: Ibexa\Core\MVC\Symfony\Controller\Controller
+        parent: ezpublish.controller.base
         
     # Same as above for the page controller
     # {{ render( controller( "ez_page:viewAction", {'block': myBlock} ) ) }}

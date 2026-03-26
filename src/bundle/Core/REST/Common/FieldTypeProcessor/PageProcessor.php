@@ -7,7 +7,7 @@
 namespace MediataCom\MediataEzpageFieldtypeBundle\Core\REST\Common\FieldTypeProcessor;
 
 use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\Parts\Base;
-use Ibexa\Contracts\Rest\FieldTypeProcessor;
+use EzSystems\EzPlatformRest\FieldTypeProcessor;
 
 class PageProcessor extends FieldTypeProcessor
 {
