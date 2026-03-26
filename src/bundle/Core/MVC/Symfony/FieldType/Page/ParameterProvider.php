@@ -6,9 +6,9 @@
  */
 namespace MediataCom\MediataEzpageFieldtypeBundle\Core\MVC\Symfony\FieldType\Page;
 
-use Ibexa\Core\MVC\Symfony\FieldType\View\ParameterProviderInterface;
+use eZ\Publish\Core\MVC\Symfony\FieldType\View\ParameterProviderInterface;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\PageService;
-use Ibexa\Contracts\Core\Repository\Values\Content\Field;
+use eZ\Publish\API\Repository\Values\Content\Field;
 
 
 

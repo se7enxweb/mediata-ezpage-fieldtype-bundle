@@ -6,7 +6,7 @@
  */
 namespace MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page;
 
-use Ibexa\Core\FieldType\Value as BaseValue;
+use eZ\Publish\Core\FieldType\Value as BaseValue;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\Parts\Page;
 
 class Value extends BaseValue

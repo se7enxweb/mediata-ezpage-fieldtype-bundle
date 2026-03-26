@@ -9,8 +9,8 @@ namespace MediataCom\MediataEzpageFieldtypeBundle\EventListener;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\PageService;
 use MediataCom\MediataEzpageFieldtypeBundle\FieldType\Page\PageService as CoreBundlePageService;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\MVC\Symfony\View\BlockView;
-use Ibexa\Core\MVC\Symfony\View\Event\FilterViewParametersEvent;
-use Ibexa\Core\MVC\Symfony\View\ViewEvents;
+use eZ\Publish\Core\MVC\Symfony\View\Event\FilterViewParametersEvent;
+use eZ\Publish\Core\MVC\Symfony\View\ViewEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**

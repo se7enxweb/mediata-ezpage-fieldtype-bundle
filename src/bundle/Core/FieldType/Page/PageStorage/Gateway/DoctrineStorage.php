@@ -8,7 +8,7 @@ namespace MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\PageStorag
 
 use DateTime;
 use Doctrine\DBAL\Connection;
-use Ibexa\Core\Base\Exceptions\NotFoundException;
+use eZ\Publish\Core\Base\Exceptions\NotFoundException;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\PageStorage\Gateway;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\Parts\Block;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\Parts\Item;

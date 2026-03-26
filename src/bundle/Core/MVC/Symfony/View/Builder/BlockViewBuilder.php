@@ -9,8 +9,8 @@ namespace MediataCom\MediataEzpageFieldtypeBundle\Core\MVC\Symfony\View\Builder;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\PageService;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\Parts\Block;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\MVC\Symfony\View\BlockView;
-use Ibexa\Core\MVC\Symfony\View\Configurator;
-use Ibexa\Core\MVC\Symfony\View\ParametersInjector;
+use eZ\Publish\Core\MVC\Symfony\View\Configurator;
+use eZ\Publish\Core\MVC\Symfony\View\ParametersInjector;
 use Symfony\Component\HttpKernel\Controller\ControllerReference;
 
 /**

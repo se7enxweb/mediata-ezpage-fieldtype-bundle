@@ -8,10 +8,10 @@ namespace MediataCom\MediataEzpageFieldtypeBundle\Core\MVC\View\Provider;
 
 use eZ\Publish\Core\MVC\Legacy\View\Provider;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\MVC\Symfony\View\BlockValueView;
-use Ibexa\Core\MVC\Symfony\View\View;
-use Ibexa\Core\MVC\Symfony\View\ViewProvider;
+use eZ\Publish\Core\MVC\Symfony\View\View;
+use eZ\Publish\Core\MVC\Symfony\View\ViewProvider;
 use eZ\Publish\Core\MVC\Legacy\Templating\Adapter\BlockAdapter;
-use Ibexa\Core\MVC\Symfony\View\ContentView;
+use eZ\Publish\Core\MVC\Symfony\View\ContentView;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\PageService;
 use eZTemplate;
 use ezpEvent;

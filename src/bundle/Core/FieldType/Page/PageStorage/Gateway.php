@@ -6,7 +6,7 @@
  */
 namespace MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\PageStorage;
 
-use Ibexa\Contracts\Core\FieldType\StorageGateway;
+use eZ\Publish\SPI\FieldType\StorageGateway;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\Parts\Block;
 
 /**

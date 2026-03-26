@@ -6,7 +6,7 @@
  */
 namespace MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\Parts;
 
-use Ibexa\Contracts\Core\Repository\Values\ValueObject;
+use eZ\Publish\API\Repository\Values\ValueObject;
 
 /**
  * @property-read mixed $contentId Related content Id.

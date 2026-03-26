@@ -11,7 +11,7 @@ use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\PageService;
 use MediataCom\MediataEzpageFieldtypeBundle\View\Manager as ViewManager;
 use Symfony\Component\HttpFoundation\Response;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\MVC\Symfony\View\BlockView;
-use Ibexa\Core\MVC\Symfony\Controller\Controller;
+use eZ\Publish\Core\MVC\Symfony\Controller\Controller;
 
 /**
  * This controller provides the block view feature.

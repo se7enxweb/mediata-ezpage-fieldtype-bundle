@@ -6,9 +6,9 @@
  */
 namespace MediataCom\MediataEzpageFieldtypeBundle\Core\MVC\Symfony\FieldType\Page;
 
-use Ibexa\Contracts\Core\SiteAccess\ConfigResolverInterface;
+use eZ\Publish\Core\MVC\ConfigResolverInterface;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\PageStorage\Gateway as PageGateway;
-use Ibexa\Contracts\Core\Repository\ContentService;
+use eZ\Publish\API\Repository\ContentService;
 
 class PageServiceFactory
 {

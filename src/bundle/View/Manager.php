@@ -2,9 +2,9 @@
 
 namespace MediataCom\MediataEzpageFieldtypeBundle\View;
 
-use Ibexa\Contracts\Core\Repository\Repository;
-use Ibexa\Contracts\Core\SiteAccess\ConfigResolverInterface;
-use Ibexa\Core\MVC\Symfony\View\Manager as BaseManager;
+use eZ\Publish\API\Repository\Repository;
+use eZ\Publish\Core\MVC\ConfigResolverInterface;
+use eZ\Publish\Core\MVC\Symfony\View\Manager as BaseManager;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\MVC\Symfony\View\BlockView;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;

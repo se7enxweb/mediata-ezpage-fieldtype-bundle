@@ -2,9 +2,9 @@
 
 namespace MediataCom\MediataEzpageFieldtypeBundle\DependencyInjection;
 
-use Ibexa\Bundle\Core\DependencyInjection\Configuration\ParserInterface;
-use Ibexa\Bundle\Core\DependencyInjection\Configuration\SiteAccessAware\Configuration as SiteAccessConfiguration;
-use Ibexa\Bundle\Core\DependencyInjection\Configuration\Suggestion\Collector\SuggestionCollectorInterface;
+use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\ParserInterface;
+use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\SiteAccessAware\Configuration as SiteAccessConfiguration;
+use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\Suggestion\Collector\SuggestionCollectorInterface;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 

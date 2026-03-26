@@ -6,7 +6,7 @@
  */
 namespace MediataCom\MediataEzpageFieldtypeBundle\Core\MVC\Symfony\Matcher\Block;
 
-use Ibexa\Core\MVC\RepositoryAware;
+use eZ\Publish\Core\MVC\RepositoryAware;
 
 /**
  * Abstract class for basic matchers, accepting multiple values to match against.

@@ -9,7 +9,7 @@ namespace MediataCom\MediataEzpageFieldtypeBundle\Core\MVC\Symfony\Matcher\Block
 use eZ\Publish\Core\MVC\Symfony\Matcher\Block\MultipleValued;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\Parts\Block as PageBlock;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\MVC\Symfony\View\BlockValueView;
-use Ibexa\Core\MVC\Symfony\View\View;
+use eZ\Publish\Core\MVC\Symfony\View\View;
 
 class Block extends MultipleValued
 {

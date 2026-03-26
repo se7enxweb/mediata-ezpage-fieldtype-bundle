@@ -6,11 +6,11 @@
  */
 namespace MediataCom\MediataEzpageFieldtypeBundle\DependencyInjection\Configuration\Parser;
 
-use Ibexa\Bundle\Core\DependencyInjection\Configuration\AbstractParser;
-use Ibexa\Bundle\Core\DependencyInjection\Configuration\SiteAccessAware\ContextualizerInterface;
-use Ibexa\Core\MVC\Symfony\SiteAccess;
+use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\AbstractParser;
+use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\SiteAccessAware\ContextualizerInterface;
+use eZ\Publish\Core\MVC\Symfony\SiteAccess;
 use Symfony\Component\Config\Definition\Builder\NodeBuilder;
-use Ibexa\Bundle\Core\DependencyInjection\Configuration\ConfigResolver;
+use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\ConfigResolver;
 
 class Page extends AbstractParser
 {

@@ -8,7 +8,7 @@ namespace MediataCom\MediataEzpageFieldtypeBundle\FieldType\Page;
 
 use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\PageService as BasePageService;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\Parts\Block;
-use Ibexa\Core\Base\Exceptions\UnauthorizedException;
+use eZ\Publish\Core\Base\Exceptions\UnauthorizedException;
 
 class PageService extends BasePageService
 {

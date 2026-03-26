@@ -7,9 +7,9 @@
 namespace MediataCom\MediataEzpageFieldtypeBundle\Core\MVC\Symfony\View;
 
 use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\Parts\Block;
-use Ibexa\Core\MVC\Symfony\View\BaseView;
-use Ibexa\Core\MVC\Symfony\View\View;
-use Ibexa\Core\MVC\Symfony\View\CachableView;
+use eZ\Publish\Core\MVC\Symfony\View\BaseView;
+use eZ\Publish\Core\MVC\Symfony\View\View;
+use eZ\Publish\Core\MVC\Symfony\View\CachableView;
 
 class BlockView extends BaseView implements View, BlockValueView, CachableView
 {

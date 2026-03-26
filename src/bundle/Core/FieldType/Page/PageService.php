@@ -6,8 +6,8 @@
  */
 namespace MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page;
 
-use Ibexa\Contracts\Core\Repository\ContentService;
-use Ibexa\Core\Base\Exceptions\NotFoundException;
+use eZ\Publish\API\Repository\ContentService;
+use eZ\Publish\Core\Base\Exceptions\NotFoundException;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\PageStorage\Gateway;
 use MediataCom\MediataEzpageFieldtypeBundle\Core\FieldType\Page\Parts\Block;
 use RuntimeException;
