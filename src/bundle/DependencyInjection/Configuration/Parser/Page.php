@@ -96,13 +96,13 @@ class Page extends AbstractParser
     {
         $container = $contextualizer->getContainer();
         $defaultConfig = [
-            'layouts' => $container->getParameter('ibexa.site_access.config.default.ezpage.layouts'),
-            'blocks' => $container->getParameter('ibexa.site_access.config.default.ezpage.blocks'),
-            'enabledLayouts' => $container->getParameter('ibexa.site_access.config.default.ezpage.enabledLayouts'),
-            'enabledBlocks' => $container->getParameter('ibexa.site_access.config.default.ezpage.enabledBlocks'),
+            'layouts' => $container->getParameter('ezsettings.default.ezpage.layouts'),
+            'blocks' => $container->getParameter('ezsettings.default.ezpage.blocks'),
+            'enabledLayouts' => $container->getParameter('ezsettings.default.ezpage.enabledLayouts'),
+            'enabledBlocks' => $container->getParameter('ezsettings.default.ezpage.enabledBlocks'),
         ];
         $container->setParameter(
-            'ibexa.site_access.config.' . ConfigResolver::SCOPE_DEFAULT . '.ezpage',
+            'ezsettings.' . ConfigResolver::SCOPE_DEFAULT . '.ezpage',
             $defaultConfig
         );
 
@@ -112,8 +112,8 @@ class Page extends AbstractParser
         // the enabled ones for this sa
         $configResolver = new ConfigResolver(
             null,
-            $container->getParameter('ibexa.site_access.groups_by_site_access'),
-            $container->getParameter('ibexa.config.default_scope')
+            $container->getParameter('ezpublish.siteaccess.groups_by_siteaccess'),
+            'ezsettings'
         );
         $configResolver->setContainer($container);
 
@@ -134,7 +134,7 @@ class Page extends AbstractParser
                 );
                 $ezpageSettings[$enabledKey] = array_unique($ezpageSettings[$enabledKey]);
             }*/
-            $container->setParameter("ibexa.site_access.config.$sa.ezpage", $ezpageSettings);
+            $container->setParameter("ezsettings.$sa.ezpage", $ezpageSettings);
         }
     }
 

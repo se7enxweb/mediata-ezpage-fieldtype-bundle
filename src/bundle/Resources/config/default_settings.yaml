@@ -2,9 +2,9 @@ parameters:
     ###
     # default ezpage settings
     ##
-    ibexa.site_access.config.default.ezpage.enabledLayouts: []
-    ibexa.site_access.config.default.ezpage.enabledBlocks: []
-    ibexa.site_access.config.default.ezpage.layouts:
+    ezsettings.default.ezpage.enabledLayouts: []
+    ezsettings.default.ezpage.enabledBlocks: []
+    ezsettings.default.ezpage.layouts:
         GlobalZoneLayout:
             name: Global zone layout
             template: globalzonelayout.tpl
@@ -27,7 +27,7 @@ parameters:
             name: Call For Action zone layout
             template: callforactionlayout.tpl
 
-    ibexa.site_access.config.default.ezpage.blocks:
+    ezsettings.default.ezpage.blocks:
         DemoBlock:
             name: Demo Block
         Manual2Items:
