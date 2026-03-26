@@ -12,7 +12,7 @@ class MediataEzpageFieldtypeBundle extends Bundle
     {
         parent::build($container);
 
-        $eZExtension = $container->getExtension('ibexa');
+        $eZExtension = $container->getExtension('ezpublish');
         $eZExtension->addConfigParser(new Page());
         $eZExtension->addDefaultSettings(__DIR__ . '/Resources/config', ['default_settings.yaml']);     
     }
